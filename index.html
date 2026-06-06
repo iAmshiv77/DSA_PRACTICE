@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📚 Engineering Study Book</title>
+  <meta name="description" content="DSA, System Design, C++ internals, Architecture Patterns, Machine Coding & DevOps — a senior engineer's study book." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>" />
+  <!-- Theme: docsify-themeable (clean, book-like) -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" />
+  <style>
+    :root {
+      --theme-color: #4763ff;
+      --base-font-size: 16px;
+      --content-max-width: 60em;
+      --sidebar-width: 19rem;
+      --code-font-size: 0.85rem;
+      --code-theme-background: #1e1e2e;
+    }
+    /* Book-like reading column + comfortable line height */
+    .markdown-section { line-height: 1.7; }
+    .markdown-section h1 { padding-top: 0.3em; }
+    .markdown-section pre { border-radius: 8px; }
+    /* Reading-progress bar at the very top */
+    #readbar { position: fixed; top: 0; left: 0; height: 3px; width: 0;
+               background: var(--theme-color); z-index: 999; transition: width .1s; }
+    .app-name-link img, .app-name-link { font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div id="app">📖 Loading your study book…</div>
+  <div id="readbar"></div>
+  <script>
+    window.$docsify = {
+      name: '📚 Study Book',
+      repo: 'https://github.com/iAmshiv77/DSA_PRACTICE',
+      homepage: 'README.md',
+      loadSidebar: true,
+      loadNavbar: false,
+      coverpage: true,
+      onlyCover: false,
+      maxLevel: 3,          // build page TOC up to h3
+      subMaxLevel: 3,       // show h2/h3 of current page in sidebar
+      auto2top: true,
+      autoHeader: false,
+      relativePath: false,
+      notFoundPage: true,
+      themeColor: '#4763ff',
+      search: {
+        placeholder: '🔍 Search the whole book…',
+        noData: 'No results found.',
+        depth: 6,
+        hideOtherSidebarContent: false
+      },
+      pagination: {        // book-style Prev / Next at the bottom of each page
+        previousText: '⬅ Prev',
+        nextText: 'Next ➡',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      count: {             // word count / reading time per page
+        countable: true,
+        position: 'top',
+        margin: '6px',
+        float: 'right',
+        fontsize: '0.85em',
+        color: '#888',
+        language: 'english'
+      },
+      sidebarDisplayLevel: 0,   // collapse all chapters by default (clean TOC)
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'   // same sidebar on every page
+      }
+    };
+  </script>
+
+  <!-- Docsify core -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1/dist/docsify-sidebar-collapse.min.js"></script>
+
+  <!-- Syntax highlighting for the languages used across the notes -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-docker.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-jsx.min.js"></script>
+
+  <!-- Reading-progress bar -->
+  <script>
+    window.addEventListener('scroll', function () {
+      var h = document.documentElement;
+      var pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+      var bar = document.getElementById('readbar');
+      if (bar) bar.style.width = (pct || 0) + '%';
+    });
+  </script>
+</body>
+</html>

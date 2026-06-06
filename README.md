@@ -32,6 +32,23 @@ A structured collection of my complete study notes and practice solutions — co
 
 - **01-Memory-Management** — heap vs stack, what a leak really is, RAII, Rule of 0/3/5, `unique_ptr`/`shared_ptr`/`weak_ptr`, reference-cycle leaks, move semantics, ASan/Valgrind — with runnable `.cpp` examples
 
+## 📖 Read as a Book
+
+This repo doubles as a browsable **online book** (powered by [Docsify](https://docsify.js.org) — no build step). Sidebar navigation, full-text search, prev/next paging, syntax highlighting, and a dark cover page.
+
+**Live site:** `https://iAmshiv77.github.io/DSA_PRACTICE/` *(after enabling GitHub Pages — see below)*
+
+**Read locally (offline):**
+```bash
+# Option A — Docsify CLI (nicest)
+npm i -g docsify-cli && docsify serve .
+
+# Option B — any static server, then open http://localhost:3000
+npx serve .            # or: python -m http.server 3000
+```
+
+**Deploy (one-time setup):** push to `main`, then in GitHub → **Settings → Pages → Source = "GitHub Actions"**. The included [`.github/workflows/pages.yml`](.github/workflows/pages.yml) publishes the book on every push.
+
 ## 🚀 How to Use
 
 Each topic folder contains its own `notes.md` (and `README.md` where applicable). DSA problems are individual `.cpp` files named by pattern and problem.

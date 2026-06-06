@@ -1,0 +1,39 @@
+name: Deploy Study Book to GitHub Pages
+
+# Docsify needs no build step — we publish the repo as-is.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # lets you trigger a deploy manually from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; newer pushes cancel in-progress ones.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site (whole repo — Docsify serves markdown directly)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
