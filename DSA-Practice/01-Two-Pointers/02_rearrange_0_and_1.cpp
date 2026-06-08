@@ -1,39 +1,36 @@
-/*
- * Problem  : Rearrange 0 and 1
- * Difficulty: Easy
- * Link     : https://www.geeksforgeeks.org/problems/segregate-0s-and-1s5106/1
- * Pattern  : Two Pointers
- *
- * Problem Statement:
- * Segregate 0s and 1s in-place.
- *
- * Examples:
- *   Input  :
- *   Output :
- *
- * Approach / Intuition:
- *   -
- *
- * Time Complexity : O()
- * Space Complexity: O()
- */
+
 
 #include <bits/stdc++.h>
 using namespace std;
 
 class Solution {
-public:
-    // TODO: implement
-
+   public:
+    vector<int> rearrange(vector<int>& nums) {
+        int l = 0;
+        int r = nums.size() - 1;
+        while (l < r) {
+            while (l < r && nums[l] != 1)
+                l++;
+            while (l < r && nums[r] != 0)
+                r--;
+            if (l < r) {
+                swap(nums[l], nums[r]);
+                l++;
+                r--;
+            }
+        }
+        return nums;
+    };
 };
 
-/* ────────── Test ────────── */
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     Solution sol;
-    // TODO: add test cases
-
-    return 0;
-}
+    vector<int> num = {1, 0, 1, 0, 0, 1, 0};
+    auto result = sol.rearrange(num);
+    for (int x : result) {
+        cout << x;
+    };
+};
