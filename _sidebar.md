@@ -76,6 +76,7 @@
     - [Leader Election](System-Design/03-Architecture-Patterns/13-Leader-Election/notes.md)
     - [Strangler Fig & ACL](System-Design/03-Architecture-Patterns/14-Strangler-Fig-and-Anti-Corruption-Layer/notes.md)
     - [Sidecar & Service Mesh](System-Design/03-Architecture-Patterns/15-Sidecar-and-Service-Mesh/notes.md)
+    - [REST vs gRPC](System-Design/03-Architecture-Patterns/16-REST-vs-gRPC/notes.md)
 
 - 💻 **Machine Coding**
   - [Overview](Machine-Coding/README.md)
