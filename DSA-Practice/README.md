@@ -17,9 +17,10 @@ DSA-Practice/
 ├── 11-Binary-Search/         20 problems
 ├── 12-Heap/                  16 problems
 ├── 13-Recursion-Backtracking/ 10 problems
-└── 14-Trees/                 23 problems
+├── 14-Trees/                 23 problems
+└── 15-Star-Patterns/         20 problems
                          ─────────────
-                        TOTAL: 147 problems
+                        TOTAL: 167 problems
 ```
 
 ## How to Use Each File
@@ -70,6 +71,7 @@ int main()        { ... }  ← add your own test cases
 | Heap (K problems) | Top-K, K closest, streaming median |
 | Backtracking | All permutations/combinations/subsets |
 | Trees | DFS/BFS, path sum, LCA, BST properties |
+| Star Patterns | Nested-loop drills: rows × columns, indent + shape |
 
 ## Compile & Run
 
