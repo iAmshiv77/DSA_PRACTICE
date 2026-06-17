@@ -30,15 +30,8 @@ using namespace std;
 
 class Solution {
 public:
-    void printRow(int i, int n) {
-        for (int j = 0; j < n - i; j++) cout << "  ";
-        for (int j = 1; j <= i; j++) cout << "* ";
-        cout << "\n";
-    }
-
     void printPattern(int n) {
-        for (int i = 1; i <= n; i++) printRow(i, n);
-        for (int i = n - 1; i >= 1; i--) printRow(i, n);
+        // TODO: implement this pattern
     }
 };
 

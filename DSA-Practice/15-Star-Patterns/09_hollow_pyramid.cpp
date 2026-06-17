@@ -27,15 +27,7 @@ using namespace std;
 class Solution {
 public:
     void printPattern(int n) {
-        for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < n - i; j++) cout << " ";
-            int width = 2 * i - 1;
-            for (int j = 1; j <= width; j++) {
-                if (j == 1 || j == width || i == n) cout << "*";
-                else cout << " ";
-            }
-            cout << "\n";
-        }
+        // TODO: implement this pattern
     }
 };
 
